@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "meikccfisi.selfhost.eu",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "Meik Server",
+            "database": "sandro",
+            "username": "Sandro",
+            "password": "A4gH329i"
+        }
+    ]
+}
