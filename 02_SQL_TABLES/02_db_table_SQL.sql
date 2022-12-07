@@ -6,16 +6,17 @@
     SHOW DATABASES;
 
 -- Datenbanken löschen wenn vorhanden
-    DROP DATABASE IF EXISTS foo;
+    DROP DATABASE IF EXISTS test;
 
 /* Datenbanken erzeugen wenn noch nicht vorhanden */
-    CREATE DATABASE IF NOT EXISTS foo;
+    CREATE DATABASE IF NOT EXISTS test;
 
 /* Datenbanken erzeugen wenn vorhanden */
-   -- USE foo;
+   USE foo;
 
 /* Tabelle erzeugen wenn noch nicht vorhanden 
     CREATE TABLE IF NOT EXISTS boo(
+        id INT 
         name VARCHAR(20),  -- die Angaben in der Klammer sind die max Stellen, ohne wäre es automatisch maximum
         age INT(3)  -- auch hier, da wir beim Alter nicht mehr als 3 Stellen bruachen, da niemand 1000 Jahre wird, kann auf 3 Stellen begrenzt werden
     );*/
