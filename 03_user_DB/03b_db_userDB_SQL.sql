@@ -22,9 +22,9 @@ DESCRIBE sandro.users;
 
 /* Daten */
 INSERT INTO sandro.users(firstName, lastName, userName, userPass) VALUES 
-    ("Josi", "Moe", "josi", SHA1("1234")),
-    ("Josh", "Foe", "josh", SHA1("#7xR3")),
-    ("John", "Doe", "john", SHA1("qwert")),
+    ("Josi", "Moe", "josi", "1234"),
+    ("Josh", "Foe", "josh", "#7xR3"),
+    ("John", "Doe", "john", "qwert")
 ;
 
 /* show Table */
