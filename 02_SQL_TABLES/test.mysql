@@ -1,0 +1,11 @@
+SHOW DATABASES;                                     # Zeige Datenbanken
+SELECT * FROM test;                                 # Zeige Datenbanken
+DROP TABLE IF EXISTS test;                          # Tabelle löschen wenn vorhanden
+CREATE TABLE IF NOT EXISTS test(                    # Tabelle erstellen wenn nicht vorhanden
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,     # id als int nicht NULL aber zählt automatisch 1 weiter, ist als primary key definiert
+    name VARCHAR(20) NOT NULL,                      # name als String mit 20 maximal Stellen nicht NULL
+    age INT(3) NOT NULL,                            # age als int mit 3 maximal Stellen nicht NULL
+    pet VARCHAR(20) NOT NULL DEFAULT "Katze"        # race als String mit 20 maximal Stellen nicht NULL und wenn nichts angegeben, wird default Katze eingetragen
+);
+INSERT INTO test (name, age) VALUES ("Beauty", 5);  # Tabelle erstellen wenn nicht vorhanden
+SELECT * FROM test;                                 # Tabelle ausgeben
