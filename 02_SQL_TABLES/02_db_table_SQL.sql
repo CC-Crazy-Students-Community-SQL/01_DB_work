@@ -22,7 +22,6 @@
 
 /* Datenbanken erzeugen wenn vorhanden */
    USE foo;
->>>>>>> 6e2ce5036db6452beb1d7a002ae9b7d95c3d1343
 
 /* Tabelle erzeugen wenn noch nicht vorhanden 
     CREATE TABLE IF NOT EXISTS boo(
@@ -36,5 +35,3 @@
 
 /* Ausgabe der Struktur der Tabelle */
     -- DESCRIBE boo;
-
-
