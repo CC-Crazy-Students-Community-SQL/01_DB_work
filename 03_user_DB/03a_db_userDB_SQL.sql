@@ -1,8 +1,12 @@
 /* USER DB Vers. 1 */
 
+/* 	 
+    Passwörter werden hinzugefügt
+*/
+
 /* DB  Bei mir nur auskommentiert, da ich eine eigene Datenabnk nutze */
--- DROP DATABASE IF EXISTS sandro;
--- CREATE DATABASE IF NOT EXISTS sandro;
+    DROP DATABASE IF EXISTS sandro;
+    CREATE DATABASE IF NOT EXISTS sandro;
 
 /* show DBs */
 SHOW DATABASES;

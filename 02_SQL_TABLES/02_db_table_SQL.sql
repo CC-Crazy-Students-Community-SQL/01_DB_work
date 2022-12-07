@@ -6,32 +6,25 @@
     SHOW DATABASES;
 
 -- Datenbanken löschen wenn vorhanden
-<<<<<<< HEAD
-    DROP DATABASE IF EXISTS test02;
+    DROP DATABASE IF EXISTS sandro;
 
 /* Datenbanken erzeugen wenn noch nicht vorhanden */
-    CREATE DATABASE IF NOT EXISTS test02;
+    CREATE DATABASE IF NOT EXISTS sandro;
 
-/* Datenbanken erzeugen wenn vorhanden */
-   USE test02;
-=======
-    DROP DATABASE IF EXISTS test;
+/* verwende angelegte Datenbanken */
+   USE sandro;
 
-/* Datenbanken erzeugen wenn noch nicht vorhanden */
-    CREATE DATABASE IF NOT EXISTS test;
+/* Tabelle löschen wenn vorhanden */
+    DROP TABLE IF EXISTS test;
 
-/* Datenbanken erzeugen wenn vorhanden */
-   USE foo;
-
-/* Tabelle erzeugen wenn noch nicht vorhanden 
-    CREATE TABLE IF NOT EXISTS boo(
-        id INT 
-        name VARCHAR(20),  -- die Angaben in der Klammer sind die max Stellen, ohne wäre es automatisch maximum
-        age INT(3)  -- auch hier, da wir beim Alter nicht mehr als 3 Stellen bruachen, da niemand 1000 Jahre wird, kann auf 3 Stellen begrenzt werden
-    );*/
-
-/* Tabelle komplett auslesen */
-    -- SELECT * FROM boo;
+/* Tabelle erzeugen wenn noch nicht vorhanden */
+    CREATE TABLE IF NOT EXISTS test(
+        id INT,
+        -- die Angaben in der Klammer sind die max Stellen, ohne wäre es automatisch maximum
+        name VARCHAR(20),
+        -- auch hier, da wir beim Alter nicht mehr als 3 Stellen bruachen, da niemand 1000 Jahre wird, kann auf 3 Stellen begrenzt werden
+        age INT(3)
+    );
 
 /* Ausgabe der Struktur der Tabelle */
-    -- DESCRIBE boo;
+    DESCRIBE test;

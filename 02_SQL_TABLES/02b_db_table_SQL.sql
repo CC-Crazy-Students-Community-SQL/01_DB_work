@@ -5,36 +5,43 @@
     UNIQUE
 */
 
+/* Datenbanken auf Server anzeigen */
+    SHOW DATABASES;
 
-/* DB boo löschen, falls vorhanden*/
-DROP DATABASE IF EXISTS test02b;
+-- Datenbanken löschen wenn vorhanden
+    DROP DATABASE IF EXISTS sandro;
 
-/* DB boo anlegen, falls noch nicht vorhanden*/
-CREATE DATABASE IF NOT EXISTS test02b;
+/* Datenbanken erzeugen wenn noch nicht vorhanden */
+    CREATE DATABASE IF NOT EXISTS sandro;
 
-/* DB auswählen */
-#USE boo;  -- boo.xxx
+/* Tabelle löschen wenn vorhanden */
+    -- anstatt use zu nutzen kann man hier auch nested objects technisch die DB angeben
+    DROP TABLE IF EXISTS sandro.test;
 
-/* Tabelle anlegen, falls noch nicht vorhanden */
-CREATE TABLE IF NOT EXISTS test02b.test
-(
-    name VARCHAR(20) NOT NULL UNIQUE DEFAULT "TBA",
-    age INT(3) NOT NULL DEFAULT 0
-);
+/* Tabelle erzeugen wenn noch nicht vorhanden */
+    CREATE TABLE IF NOT EXISTS sandro.test(
+        id INT,
+        name VARCHAR(20) NOT NULL UNIQUE DEFAULT "CAT",
+        age INT(3)
+    );
 
-DESCRIBE test02b.test;
+/* Ausgabe der Struktur der Tabelle */
+    DESCRIBE sandro.test;
 
-/* ----- Daten ------- */
-INSERT INTO test02b.test(name,age) VALUES ("Grizabella",29);
-INSERT INTO test02b.test(age,name) VALUES (35,"Alonzo");
-INSERT INTO test02b.test VALUES ();
+/* Ausgabe aller Tabellen */
+    SHOW TABLES;
 
-/* ---- Inhalte der Tabelle anzeigen ---- */
-SELECT * FROM test02b.test;
+/* Daten Tabelle eintragen */
+    INSERT INTO sandro.test(name, age) VALUES ("Romeo", 5);
+    INSERT INTO sandro.test(age, name) VALUES (3, "Beauty");
+    INSERT INTO sandro.test VALUES ();
 
+/* Inhalte der Tabelle anzeigen */
+    SELECT * FROM sandro.test;
 
--- Doppelte Datensätze werden NICHT mehr zugelassen !
-INSERT INTO test02b.test(age,name) VALUES (35,"Alonzo");
-INSERT INTO test02b.test(age,name) VALUES (35,"Alonzo");
+    -- Doppelte Datensätze werden zugelassen !
+    INSERT INTO sandro.test(age, name) VALUES (5, "Romeo");
+    INSERT INTO sandro.test(age, name) VALUES (3, "Beauty");
 
-SELECT * FROM test02b.test;
+/* Inhalte der Tabelle anzeigen */
+    SELECT * FROM sandro.test;
