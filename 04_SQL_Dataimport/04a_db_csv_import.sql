@@ -1,4 +1,4 @@
-/* Import CSV mit Index */
+/* Import CSV ohne Index */
 
 /* 	 
 	import von csv Dateien
