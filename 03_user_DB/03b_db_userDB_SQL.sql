@@ -26,11 +26,17 @@ INSERT INTO sandro.users(firstName, lastName, userName, userPass) VALUES
     ("Josh", "Foe", "josh", SHA1(MD5("#7xR3"))),
     ("John", "Doe", "john", SHA1(MD5("qwert")))
 ;
-/* show Table */
-SELECT * FROM sandro.users;
 
 /* change Table / Structur */
-ALTER TABLE sandro.users ADD userPLZ INT(5) NOT NULL DEFAULT 00000;
+ALTER TABLE sandro.users ADD userPLZ INT(5) NOT NULL DEFAULT 0;
 
 /* Struktur */
 DESCRIBE sandro.users;
+
+/* update Values */
+UPDATE sandro.users SET userPLZ=77880 WHERE username="josi";
+UPDATE sandro.users SET userPLZ=77881 WHERE id=3;
+UPDATE sandro.users SET userPLZ=77882 WHERE firstName="Josh";
+
+/* show Table */
+SELECT * FROM sandro.users;
