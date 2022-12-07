@@ -5,6 +5,7 @@
     UNIQUE
 */
 
+
 /* DB boo löschen, falls vorhanden*/
 DROP DATABASE IF EXISTS boo;
 

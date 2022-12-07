@@ -12,7 +12,7 @@
     CREATE DATABASE IF NOT EXISTS foo;
 
 /* Datenbanken erzeugen wenn vorhanden */
-   -- USE foo;
+   USE foo;
 
 /* Tabelle erzeugen wenn noch nicht vorhanden 
     CREATE TABLE IF NOT EXISTS foo.boo(
