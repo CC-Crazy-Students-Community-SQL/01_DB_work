@@ -9,7 +9,9 @@
 /* Tabelle user anlegen */
     CREATE TABLE IF NOT EXISTS users(
         id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+		userName VARCHAR(30) NOT NULL,
         firstName VARCHAR(30) NOT NULL,
 		lastName VARCHAR(30) NOT NULL,
 		age INT NOT NULL DEFAULT '0',
     );
+	DESCRIBE test03.users;
