@@ -1,15 +1,15 @@
 /* USER DB Vers. 1 */
 
-/* DB */
-DROP DATABASE IF EXISTS test03;
-CREATE DATABASE IF NOT EXISTS test03;
+/* DB  Bei mir nur auskommentiert, da ich eine eigene Datenabnk nutze */
+-- DROP DATABASE IF EXISTS sandro;
+-- CREATE DATABASE IF NOT EXISTS sandro;
 
 /* show DBs */
 SHOW DATABASES;
 
 /* TABLE */
-DROP TABLE IF EXISTS test03.users;
-CREATE TABLE IF NOT EXISTS test03.users(
+DROP TABLE IF EXISTS sandro.users;
+CREATE TABLE IF NOT EXISTS sandro.users(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     userName VARCHAR(30) NOT NULL UNIQUE,
     lastName VARCHAR(30) NOT NULL,
@@ -18,14 +18,14 @@ CREATE TABLE IF NOT EXISTS test03.users(
 );
 
 /* Struktur */
-DESCRIBE test03.users;
+DESCRIBE sandro.users;
 
 /* Daten */
-INSERT INTO test03.users(firstName, lastName, userName, userPass) VALUES 
+INSERT INTO sandro.users(firstName, lastName, userName, userPass) VALUES 
     ("Josi", "Moe", "josi", "1234"),
     ("Josh", "Foe", "josh", "#7xR3"),
     ("John", "Doe", "john", "qwert")
 ;
 
 /* show Table */
-SELECT * FROM test03.users;
+SELECT * FROM sandro.users;
