@@ -7,34 +7,34 @@
 
 
 /* DB boo löschen, falls vorhanden*/
-DROP DATABASE IF EXISTS boo;
+DROP DATABASE IF EXISTS test02b;
 
 /* DB boo anlegen, falls noch nicht vorhanden*/
-CREATE DATABASE IF NOT EXISTS boo;
+CREATE DATABASE IF NOT EXISTS test02b;
 
 /* DB auswählen */
 #USE boo;  -- boo.xxx
 
 /* Tabelle anlegen, falls noch nicht vorhanden */
-CREATE TABLE IF NOT EXISTS boo.test
+CREATE TABLE IF NOT EXISTS test02b.test
 (
     name VARCHAR(20) NOT NULL UNIQUE DEFAULT "TBA",
     age INT(3) NOT NULL DEFAULT 0
 );
 
-DESCRIBE boo.test;
+DESCRIBE test02b.test;
 
 /* ----- Daten ------- */
-INSERT INTO boo.test(name,age) VALUES ("Grizabella",29);
-INSERT INTO boo.test(age,name) VALUES (35,"Alonzo");
-INSERT INTO boo.test VALUES ();
+INSERT INTO test02b.test(name,age) VALUES ("Grizabella",29);
+INSERT INTO test02b.test(age,name) VALUES (35,"Alonzo");
+INSERT INTO test02b.test VALUES ();
 
 /* ---- Inhalte der Tabelle anzeigen ---- */
-SELECT * FROM boo.test;
+SELECT * FROM test02b.test;
 
 
 -- Doppelte Datensätze werden NICHT mehr zugelassen !
-INSERT INTO boo.test(age,name) VALUES (35,"Alonzo");
-INSERT INTO boo.test(age,name) VALUES (35,"Alonzo");
+INSERT INTO test02b.test(age,name) VALUES (35,"Alonzo");
+INSERT INTO test02b.test(age,name) VALUES (35,"Alonzo");
 
-SELECT * FROM boo.test;
+SELECT * FROM test02b.test;

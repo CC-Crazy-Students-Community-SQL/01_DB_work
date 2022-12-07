@@ -6,13 +6,13 @@
     SHOW DATABASES;
 
 -- Datenbanken löschen wenn vorhanden
-    DROP DATABASE IF EXISTS foo;
+    DROP DATABASE IF EXISTS test02;
 
 /* Datenbanken erzeugen wenn noch nicht vorhanden */
-    CREATE DATABASE IF NOT EXISTS foo;
+    CREATE DATABASE IF NOT EXISTS test02;
 
 /* Datenbanken erzeugen wenn vorhanden */
-   USE foo;
+   USE test02;
 
 /* Tabelle erzeugen wenn noch nicht vorhanden 
     CREATE TABLE IF NOT EXISTS boo(
