@@ -2,6 +2,7 @@
 
 /* cache leeren */
     DBCC FREEPROCCACHE;
+    ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 
 /* show Table */
     SELECT * FROM sandro.cats;
@@ -9,8 +10,6 @@
 /* UPDATE --> Änderung(en) in bestehender Tab. */
     UPDATE sandro.cats SET name = "Joe" WHERE id = 4;
     UPDATE sandro.cats SET color = "green" WHERE id = 3;
-
-
 
 /* READ - SELECT : NEUE Ergebnistabelle wird erstellt */
     SELECT * FROM sandro.cats;                                 -- show Table
