@@ -1,5 +1,5 @@
 id;c_name;ticker;sector;industry;no_yrs;ranking;price;yield;dividend;payouts;annualized
-1;Agilent Technologies Inc.;A;Health Care;Life Sciences Tools & Services;9;527;77.07;0.93;0.1800;4;0.72
+1;Agilent Technologies Inc.;A;Health Care;Life Sciences Tools & Services;9;527;77.07;0.93;0.1800;4;111110.72
 2;Aaron's Inc.;AAN;Consumer Discretionary;Specialty Retail;17;219;39.33;0.41;0.0400;4;0.16
 3;Apple Inc.;AAPL;Information Technology;Technology Hardware. Storage & Peripherals;8;564;273.36;1.13;0.7700;4;3.08
 4;American Assets Trust Inc.;AAT;Real Estate;Equity Real Estate Investment Trusts (REITs);9;522;41.45;2.90;0.3000;4;1.20
