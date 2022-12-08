@@ -22,7 +22,7 @@
         CONCAT(sector, " | ", industry) AS "Operations"
     FROM sandro.stocks
     # LIMIT 10 -- X Zeilen ab 0
-    LIMIT 200,10 
+    LIMIT 200, 10 
     ;
 
     /*
