@@ -1,1 +1,3 @@
 source 05_SQL_SELECT/05_db_parsing_select.sql;
+source 05_SQL_SELECT/05_db_query_basic.sql;
+source 05_SQL_SELECT/05_db_query_sort.sql;
