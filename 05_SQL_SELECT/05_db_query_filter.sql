@@ -20,23 +20,23 @@
     FROM sandro.stocks
 
     -- Einzeldaten / Strings
-    #WHERE sector = "Communication Services" -- spez. Sektor
-    #WHERE industry = "Media" -- spez. Branche
-    #WHERE payouts = 12 -- Wer zahlt monatlich?
+    # WHERE sector = "Communication Services" -- spez. Sektor
+    # WHERE industry = "Media" -- spez. Branche
+    # WHERE payouts = 12 -- Wer zahlt monatlich?
 
     -- Kombination durch AND
-    #WHERE sector = "Communication Services" AND industry = "Entertainment"
-    #WHERE sector = "Communication Services" AND payouts = 12
+    # WHERE sector = "Communication Services" AND industry = "Entertainment"
+    # WHERE sector = "Communication Services" AND payouts = 12
 
     -- Kombination durch AND / OR
-    #WHERE sector = "Communication Services" AND (industry = "Entertainment" OR industry = "Media")
+    # WHERE sector = "Communication Services" AND (industry = "Entertainment" OR industry = "Media")
 
     -- Kombination durch AND / NOT
     WHERE sector = "Communication Services" AND NOT industry = "Media"
 
     -- Sortierung
     ORDER BY industry DESC 
-    #ORDER BY price DESC 
+    # ORDER BY price DESC 
 
     -- Begrenzung
     LIMIT 3
@@ -52,25 +52,25 @@
     FROM sandro.stocks
 
     -- scharfe Suche nach Strings
-    #WHERE industry = "Media"
+    # WHERE industry = "Media"
 
     -- unschärfere Suchen --
     -- Branchenname beginnt mit ... , dahinter beliebige Chars
-    #WHERE industry LIKE "Air%"
+    # WHERE industry LIKE "Air%"
     -- Branchenname endet mit ... , davor beliebige Chars
-    #WHERE industry LIKE "%ment"
+    # WHERE industry LIKE "%ment"
     -- Branchenname enthaelt ...
-    #WHERE industry LIKE "%ood%"
+    # WHERE industry LIKE "%ood%"
 
     -- Branchenname endet/beginnt mit ... , danach/davor/inmitten genau _ Char
-    #WHERE industry LIKE "__dia"
-    #WHERE industry LIKE "Med__"
-    #WHERE industry LIKE "M___a"
-    #WHERE industry LIKE "_ir%"
-    #WHERE industry LIKE "_ood%"
+    # WHERE industry LIKE "__dia"
+    # WHERE industry LIKE "Med__"
+    # WHERE industry LIKE "M___a"
+    # WHERE industry LIKE "_ir%"
+    # WHERE industry LIKE "_ood%"
 
-    #WHERE industry LIKE "%ment"
-    #WHERE industry LIKE "%ment" AND industry NOT LIKE "%ipment"
+    # WHERE industry LIKE "%ment"
+    # WHERE industry LIKE "%ment" AND industry NOT LIKE "%ipment"
     WHERE industry LIKE "%ment" AND industry NOT LIKE "%ipment" AND industry NOT LIKE "%tain%"
 
     ORDER BY industry ASC
@@ -85,34 +85,33 @@
         sector AS "Sektor",
         industry AS "Branche"
     FROM sandro.stocks
-    #WHERE sector = "Financials" 
-    #WHERE sector = "Financials" AND industry NOT IN ("Insurance","Banks") 
+    # WHERE sector = "Financials" 
+    # WHERE sector = "Financials" AND industry NOT IN ("Insurance","Banks") 
     WHERE industry IN ("Banks","Beverages")
     ORDER BY industry ASC
     LIMIT 3
     ;
 
 -- Eingrenzen/Filtern WHERE & RegEx
-/*
-SELECT
-	c_name "Unternehmen"
-FROM sandro.stocks
-#WHERE c_name RLIKE "^[AZ]"  -- mit A oder Z beginnend
-WHERE c_name RLIKE "^[1-9]"  -- mit Ziffer beginnend
-ORDER BY c_name;
-*/
+    SELECT
+        c_name "Unternehmen"
+    FROM sandro.stocks
+    # WHERE c_name RLIKE "^[AZ]"       -- mit A oder Z beginnend
+    WHERE c_name RLIKE "^[1-9]"      -- mit Ziffer beginnend
+    ORDER BY c_name;
 
-# -- Eingrenzen/Filtern WHERE & BETWEEN / NOT BETWEEN
-# SELECT 
-#     ticker AS "SYM",
-#     c_name AS "Unternehmen",
-#     price AS "Kurs ($)",
-#     sector AS "Sektor",
-#     industry AS "Branche"
-# FROM sandro.stocks
-# #WHERE sector = "Financials" AND price < 30.0  -- =/>/<
-# #WHERE sector = "Financials" AND (price BETWEEN 30.0 AND 50.0)  -- =/>/<
-# WHERE sector = "Financials" AND NOT (price BETWEEN 20.0 AND 250.0) -- Band rausfiltern
-# ORDER BY price DESC
-# LIMIT 200 -- X Zeilen ab 0
-;
+
+-- Eingrenzen/Filtern WHERE & BETWEEN / NOT BETWEEN
+    SELECT 
+        ticker AS "SYM",
+        c_name AS "Unternehmen",
+        price AS "Kurs ($)",
+        sector AS "Sektor",
+        industry AS "Branche"
+    FROM sandro.stocks
+    # WHERE sector = "Financials" AND price < 30.0                            -- =/>/<
+    # WHERE sector = "Financials" AND (price BETWEEN 30.0 AND 50.0)           -- =/>/<
+    WHERE sector = "Financials" AND NOT (price BETWEEN 20.0 AND 250.0)      -- Band rausfiltern
+    ORDER BY price DESC
+    LIMIT 3
+    ;
