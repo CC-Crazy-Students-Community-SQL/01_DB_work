@@ -1,7 +1,5 @@
 /* CRUD Create | Read | Update | Delete */  
 
-
-
 /* show Table */
     SELECT * FROM sandro.cats;
 
