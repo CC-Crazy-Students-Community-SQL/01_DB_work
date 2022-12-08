@@ -1,8 +1,7 @@
 /* USER DB Vers. 1 */
 
-/* 	 
-    Passwörter werden hinzugefügt
-*/
+/* cache leeren */
+    DBCC FREEPROCCACHE;
 
 /* DB  Bei mir nur auskommentiert, da ich eine eigene Datenabnk nutze */
     DROP DATABASE IF EXISTS sandro;

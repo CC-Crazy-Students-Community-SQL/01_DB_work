@@ -1,5 +1,8 @@
 /* CRUD Create | Read | Update | Delete */  
 
+/* cache leeren */
+    DBCC FREEPROCCACHE;
+
 /* show Table */
     SELECT * FROM sandro.cats;
 

@@ -1,8 +1,7 @@
 /* USER DB Vers. 2 */
 
-/* 	 
-	bessere Passwörter durch Verschlüsselung  und nachträglich Felder hinzugefügt
-*/
+/* cache leeren */
+    DBCC FREEPROCCACHE;
 
 /* DB */
     DROP DATABASE IF EXISTS sandro;
