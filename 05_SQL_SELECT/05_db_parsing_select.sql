@@ -24,7 +24,7 @@
         yield DECIMAL(6,4) NOT NULL,	    -- Dividendenrendite (Dividendenanteil *100) / Aktienkurs
         dividend DECIMAL(6,4) NOT NULL,	    -- Dividendenanteil pro Aktie (Ausschuettung)
         payouts INT(2) NOT NULL,		    -- wieviel mal wird pro Jahr gezahlt?
-        annualized DECIMAL(,2) NOT NULL	-- jaehrlich    
+        annualized DECIMAL(4,2) NOT NULL	-- jaehrlich    
     );
     /*
         Decimal Datentyp:
