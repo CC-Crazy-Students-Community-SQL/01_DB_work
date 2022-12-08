@@ -19,12 +19,6 @@
         age INT(3) NOT NULL DEFAULT 0
     );
 
-/* Struktur */
-    DESCRIBE sandro.cats;
-
-/* Struktur */
-    DESCRIBE sandro.cats;
-
 /* Import - CSV-Datei parsen */
     LOAD DATA LOCAL INFILE "04_SQL_Dataimport/data/cats_export.csv" INTO TABLE sandro.cats FIELDS TERMINATED BY ";" LINES TERMINATED BY "\n" IGNORE 1 ROWS;
     -- LOAD DATA LOCAL INFILE "xx"            ladet die lokale Datei

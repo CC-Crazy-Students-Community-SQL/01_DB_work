@@ -27,9 +27,6 @@
         annualized DECIMAL(4,2) NOT NULL	-- jaehrlich    
     );
 
-/* Struktur */
-    DESCRIBE sandro.companies;
-
 /* Import - CSV-Datei parsen */
     LOAD DATA LOCAL INFILE "05_SQL_SELECT/data/ccc_dez_2019.csv" INTO TABLE sandro.companies FIELDS TERMINATED BY ";" LINES TERMINATED BY "\n" IGNORE 1 ROWS;
 
