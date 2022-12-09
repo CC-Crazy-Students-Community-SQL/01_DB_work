@@ -3,7 +3,7 @@
 /*
     Felder abfragen
     Felder sortieren
-    etwst
+    etwstwer
 */
 
 /* show Table */
