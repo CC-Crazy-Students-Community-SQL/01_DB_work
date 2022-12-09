@@ -1,8 +1,8 @@
 /* CRUD Create | Read | Update | Delete */  
 
 /* cache leeren */
-    DBCC FREEPROCCACHE;
-    ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
+    -- DBCC FREEPROCCACHE;
+    -- ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 
 /* show Table */
     SELECT * FROM sandro.cats;

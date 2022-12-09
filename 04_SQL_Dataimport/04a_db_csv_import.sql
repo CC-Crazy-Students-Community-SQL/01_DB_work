@@ -1,7 +1,7 @@
 /* Import CSV ohne Index */
 
 /* cache leeren */
-    DBCC FREEPROCCACHE;
+    -- DBCC FREEPROCCACHE;
 
 /* DB */
     DROP DATABASE IF EXISTS sandro;
