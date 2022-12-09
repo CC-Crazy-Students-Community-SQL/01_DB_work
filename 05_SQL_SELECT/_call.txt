@@ -1,4 +1,9 @@
-source 05_SQL_SELECT/05_db_parsing_select.sql;
-source 05_SQL_SELECT/05_db_query_basic.sql;
-source 05_SQL_SELECT/05_db_query_sort.sql;
-source 05_SQL_SELECT/05_db_query_filter.sql;
+source 05_SQL_SELECT/05a_db_parsing_select.sql;
+source 05_SQL_SELECT/05b_db_query_basic.sql;
+source 05_SQL_SELECT/05c_db_query_sort.sql;
+source 05_SQL_SELECT/05d_db_query_filter.sql;
+source 05_SQL_SELECT/05e_db_query_stringf.sql;
+source 05_SQL_SELECT/05f_db_query_distinct.sql;
+source 05_SQL_SELECT/05g_db_query_min_max.sql;
+source 05_SQL_SELECT/05h_db_query_count.sql;
+source 05_SQL_SELECT/05i_db_query_avg.sql;

@@ -39,9 +39,7 @@
     # ORDER BY price DESC 
 
     -- Begrenzung
-    LIMIT 3
-    ;
-
+    LIMIT 3;
 
 -- Eingrenzen/Filtern WHERE & LIKE + Parameter
 -- Unscharfe Suche 
@@ -74,8 +72,7 @@
     WHERE industry LIKE "%ment" AND industry NOT LIKE "%ipment" AND industry NOT LIKE "%tain%"
 
     ORDER BY industry ASC
-    LIMIT 3
-    ;
+    LIMIT 3;
 
 
 --  Eingrenzen/Filtern WHERE & IN / NOT IN (Suchsets)
@@ -89,8 +86,7 @@
     # WHERE sector = "Financials" AND industry NOT IN ("Insurance","Banks") 
     WHERE industry IN ("Banks","Beverages")
     ORDER BY industry ASC
-    LIMIT 3
-    ;
+    LIMIT 3;
 
 -- Eingrenzen/Filtern WHERE & RegEx
     SELECT
@@ -113,5 +109,4 @@
     # WHERE sector = "Financials" AND (price BETWEEN 30.0 AND 50.0)           -- =/>/<
     WHERE sector = "Financials" AND NOT (price BETWEEN 20.0 AND 250.0)      -- Band rausfiltern
     ORDER BY price DESC
-    LIMIT 3
-    ;
+    LIMIT 3;
